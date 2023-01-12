@@ -1,0 +1,18 @@
+
+on:
+  push:
+
+
+
+jobs:
+  empty-group:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        job_num: [1, 2, 3]
+    concurrency:
+      group: ""
+      cancel-in-progress: false
+    steps:
+      - name: Wait
+        run: sleep 20
