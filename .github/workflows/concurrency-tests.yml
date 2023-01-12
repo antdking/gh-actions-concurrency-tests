@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         job_num: [1, 2, 3]
-    concurrency: ${{ fromJson('{}') }}
+    concurrency: ${{ fromJson('null') }}
     steps:
       - name: Wait
         run: sleep 20
