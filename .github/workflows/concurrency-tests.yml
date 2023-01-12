@@ -11,7 +11,7 @@ jobs:
       matrix:
         job_num: [1, 2, 3]
     concurrency:
-      group: ${{ '' }}
+      group: null
       cancel-in-progress: false
     steps:
       - name: Wait
